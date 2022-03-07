@@ -4,3 +4,4 @@ sudo yum install cmake dconf docker htop jre nmap nodejs npm python3-setuptools 
 sudo pip3 install --user colorama requests aiohttp
 sudo yum check-update
 sudo yum update
+sudo echo 'export TERM=xterm-256color' >> $HOME/.bash_profile
