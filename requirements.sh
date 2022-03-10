@@ -1,16 +1,20 @@
 clear
 sudo echo 'export TERM=xterm-256color' >> $HOME/.bash_profile
 sudo yum groupinstall "Development Tools" -y
+sudo yum install 'dnf-command(config-manager)' -y
 clear
 sudo yum check-update
 sudo yum update -y
 clear
 sudo yum install epel-release -y
+sudo dnf config-manager --set-enabled ol8_codeready_builder
+sudo yum config-manager --set-enabled ol8_addons
 clear
 sudo yum check-update
 sudo yum update -y
 clear
-sudo yum install wget curl cmake dconf docker htop jre nmap nodejs npm python3-setuptools tmux openssl-devel libffi-devel bzip2-devel -y
+sudo yum install wget curl cmake dconf docker htop jre nmap nodejs npm python3-setuptools python3-devel tmux openssl-devel libffi-devel bzip2-devel -y
+sudo yum install screen -y
 clear
 sudo yum check-update
 sudo yum update -y
@@ -30,4 +34,4 @@ pip3.9 --version
 
 # pip requirements
 clear
-sudo pip3 install --user wheel colorama requests aiohttp proxy urllib3
+sudo pip3 install --user wheel colorama requests aiohttp proxy urllib3 uvloop cchardet
