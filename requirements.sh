@@ -28,13 +28,14 @@ cd Python-3.9*/
 ./configure --enable-optimizations
 sudo make altinstall
 clear
-python3.9 --version
-pip3.9 --version
 /usr/local/bin/python3.9 -m pip install --upgrade pip
+export PATH=$PATH:/usr/local/bin/python3.9
+echo "alias python='/usr/local/bin/python3.9'" >> ~/.bashrc
+logout
 
 # pip requirements
 clear
-sudo pip3 install --user wheel colorama requests aiohttp proxy urllib3 uvloop cchardet
+sudo pip3 install --user wheel colorama requests aiohttp proxy urllib3 uvloop cchardet psutils icmplib
 
 # pyroxy
 git clone https://github.com/MHProDev/PyRoxy
