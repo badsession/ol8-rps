@@ -35,3 +35,8 @@ pip3.9 --version
 # pip requirements
 clear
 sudo pip3 install --user wheel colorama requests aiohttp proxy urllib3 uvloop cchardet
+
+# pyroxy
+git clone https://github.com/MHProDev/PyRoxy
+cd PyRoxy/
+sudo python3 setup.py install
