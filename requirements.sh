@@ -13,7 +13,7 @@ clear
 sudo yum check-update
 sudo yum update -y
 clear
-sudo yum install wget curl cmake dconf docker htop jre nmap nodejs npm python3-setuptools python3-devel tmux openssl-devel libffi-devel bzip2-devel -y
+sudo yum install wget curl cmake dconf docker htop jre nmap nodejs npm python3-setuptools tmux openssl-devel libffi-devel bzip2-devel -y
 sudo yum install screen -y
 clear
 sudo yum check-update
@@ -36,6 +36,7 @@ logout
 # pip requirements
 clear
 sudo pip3 install --user wheel colorama requests aiohttp proxy urllib3 uvloop cchardet psutils icmplib
+sudo yum install python3-devel -y
 
 # pyroxy
 git clone https://github.com/MHProDev/PyRoxy
